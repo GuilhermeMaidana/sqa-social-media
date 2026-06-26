@@ -1,1 +1,13 @@
-import { isEmailValid } from "@/utils/email";describe("Utils - Email", () => {  describe("function isEmailValid", () => {    test("deve retornar true se o email possui nome de usu+írio, s+¡mbolo @ e dom+¡nio com extens+úo", () => {      expect(isEmailValid("test@test.com")).toBe(true);    });    test("deve retornar false se o email n+úo possui extens+úo no dom+¡nio (falta .com, .br, etc)", () => {      expect(isEmailValid("test@test")).toBe(false);    });  });});
+import { isEmailValid } from "@/utils/email";
+
+describe("Utils - Email", () => {
+  describe("function isEmailValid", () => {
+    test("deve retornar true se o email possui nome de usuÃ¡rio, sÃ­mbolo @ e domÃ­nio com extensÃ£o", () => {
+      expect(isEmailValid("test@test.com")).toBe(true);
+    });
+
+    test("deve retornar false se o email nÃ£o possui extensÃ£o no domÃ­nio (falta .com, .br, etc)", () => {
+      expect(isEmailValid("test@test")).toBe(false);
+    });
+  });
+});
