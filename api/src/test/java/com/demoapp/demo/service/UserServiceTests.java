@@ -1,4 +1,4 @@
-﻿package com.demoapp.demo.service;
+package com.demoapp.demo.service;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -10,20 +10,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class UserServiceTests {
 
   @Test
-  @DisplayName("Aceita senha v├ílida: possui ao menos 8 caracteres, uma mai├║scula, uma min├║scula, um d├¡gito e um caractere especial")
+  @DisplayName("Aceita senha válida: possui ao menos 8 caracteres, uma maiúscula, uma minúscula, um dígito e um caractere especial")
   void deveAceitarSenhaValidaQuandoAtendeTodosOsRequisitos() {
     String password = "Password123!";
     UserService userService = new UserService(null);
     boolean isValid = userService.isPasswordValid(password);
-    assertTrue(isValid, "Esperava que 'Password123!' fosse considerada v├ílida (>=8 caracteres, 1 mai├║scula, 1 min├║scula, 1 d├¡gito e 1 caractere especial).");
+    assertTrue(isValid, "Esperava que 'Password123!' fosse considerada válida (>=8 caracteres, 1 maiúscula, 1 minúscula, 1 dígito e 1 caractere especial).");
   }
 
   @Test
-  @DisplayName("Rejeita senha inv├ílida: n├úo cont├®m letra mai├║scula (apenas min├║sculas e d├¡gitos), portanto n├úo atende ├á pol├¡tica")
+  @DisplayName("Rejeita senha inválida: não contém letra maiúscula (apenas minúsculas e dígitos), portanto não atende à política")
   void deveRejeitarSenhaQuandoNaoContemMaiuscula() {
     String password = "password123";
     UserService userService = new UserService(null);
     boolean isValid = userService.isPasswordValid(password);
-    assertFalse(isValid, "Esperava rejeitar 'password123' porque falta ao menos uma letra mai├║scula e/ou caractere especial conforme a pol├¡tica.");
+    assertFalse(isValid, "Esperava rejeitar 'password123' porque falta ao menos uma letra maiúscula e/ou caractere especial conforme a política.");
   }
 }
