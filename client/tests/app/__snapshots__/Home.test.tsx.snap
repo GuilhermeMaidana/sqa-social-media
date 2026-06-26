@@ -16,14 +16,10 @@ exports[`App - Home deve renderizar o número de posts corretamente de acordo co
         >
           SQA Social Media
         </h1>
-          <div
-            style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;"
-          >
-            <div
-              style="display: flex; gap: 1rem; align-items: center; color: var(--foreground); opacity: 0.8; font-size: 0.875rem;"
-            >
-            </div>
-            <button
+        <div
+          style="display: flex; gap: 1rem; align-items: center;"
+        >
+          <button
             style="background: transparent; color: var(--foreground); border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 0.375rem; cursor: pointer; font-weight: 500; font-size: 1rem; transition: all 0.2s; opacity: 1;"
           >
             Entrar
@@ -64,8 +60,7 @@ exports[`App - Home deve renderizar o número de posts corretamente de acordo co
           >
             <div
               style="display: flex; gap: 1rem; align-items: center; color: var(--foreground); opacity: 0.8; font-size: 0.875rem;"
-            >
-            </div>
+            />
             <button
               style="background: transparent; color: var(--foreground); border: 2px solid var(--border); padding: 0.5rem 1.25rem; border-radius: 0.375rem; cursor: pointer; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; opacity: 1;"
             >
@@ -99,8 +94,7 @@ exports[`App - Home deve renderizar o número de posts corretamente de acordo co
           >
             <div
               style="display: flex; gap: 1rem; align-items: center; color: var(--foreground); opacity: 0.8; font-size: 0.875rem;"
-            >
-            </div>
+            />
             <button
               style="background: transparent; color: var(--foreground); border: 2px solid var(--border); padding: 0.5rem 1.25rem; border-radius: 0.375rem; cursor: pointer; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; opacity: 1;"
             >
