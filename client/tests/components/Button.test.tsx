@@ -1,1 +1,27 @@
-import { fireEvent, render } from "@testing-library/react";import Button from "@/components/Button";describe("Button", () => {  describe("function renderButton", () => {    test("deve gerar o snapshot e ser id+¬ntico ao snapshot anterior", () => {      const { asFragment } = render(        <Button onClick={() => {}}>Click me</Button>      );      expect(asFragment()).toMatchSnapshot();    });    test("deve renderizar o bot+úo com o texto 'Click me'", () => {      const { getByText } = render(        <Button onClick={() => {}}>Click me</Button>      );      expect(getByText("Click me")).toBeDefined();    });    test("deve chamar a fun+º+úo onClick quando o bot+úo for clicado", () => {      const onClick = jest.fn();      const { getByText } = render(<Button onClick={onClick}>Click me</Button>);      fireEvent.click(getByText("Click me"));      expect(onClick).toHaveBeenCalled();    });  });});
+import { fireEvent, render } from "@testing-library/react";
+import Button from "@/components/Button";
+
+describe("Button", () => {
+  describe("function renderButton", () => {
+    test("deve gerar o snapshot e ser idÃªntico ao snapshot anterior", () => {
+      const { asFragment } = render(
+        <Button onClick={() => {}}>Click me</Button>
+      );
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    test("deve renderizar o botÃ£o com o texto 'Click me'", () => {
+      const { getByText } = render(
+        <Button onClick={() => {}}>Click me</Button>
+      );
+      expect(getByText("Click me")).toBeDefined();
+    });
+
+    test("deve chamar a funÃ§Ã£o onClick quando o botÃ£o for clicado", () => {
+      const onClick = jest.fn();
+      const { getByText } = render(<Button onClick={onClick}>Click me</Button>);
+      fireEvent.click(getByText("Click me"));
+      expect(onClick).toHaveBeenCalled();
+    });
+  });
+});

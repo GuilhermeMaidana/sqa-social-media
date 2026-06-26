@@ -1,1 +1,73 @@
-# SQA Social Media E2ETestes Playwright para validar fluxos de interface e endpoints da API.## Vis+úo Geral- `tests/e2e/`: fluxos que acessam o frontend.- `tests/api/`: testes diretos contra endpoints da API.- `playwright.config.ts`: configura+º+úo dos navegadores e execu+º+úo.Os testes esperam:- Frontend em `http://localhost:3000`- API em `http://localhost:8080`## Como RodarPr+®-requisitos:- Node.js 18+- API rodando- Frontend rodandoInstale as depend+¬ncias:```bashnpm installnpx playwright install```Execute todos os testes:```bashnpm test```Execute apenas os fluxos de interface:```bashnpm run test:e2e```Execute apenas os testes de API:```bashnpm run test:api```Modo UI:```bashnpx playwright test --ui```Modo com navegador vis+¡vel:```bashnpx playwright test --headed```## Estrutura```texte2e/Ôö£ÔöÇÔöÇ tests/api/Ôö£ÔöÇÔöÇ tests/e2e/Ôö£ÔöÇÔöÇ package.jsonÔööÔöÇÔöÇ playwright.config.ts```## Refer+¬ncia- [Playwright](https://playwright.dev/docs/intro)
+# SQA Social Media E2E
+
+Testes Playwright para validar fluxos de interface e endpoints da API.
+
+## VisÃ£o Geral
+
+- `tests/e2e/`: fluxos que acessam o frontend.
+- `tests/api/`: testes diretos contra endpoints da API.
+- `playwright.config.ts`: configuraÃ§Ã£o dos navegadores e execuÃ§Ã£o.
+
+Os testes esperam:
+
+- Frontend em `http://localhost:3000`
+- API em `http://localhost:8080`
+
+## Como Rodar
+
+PrÃ©-requisitos:
+
+- Node.js 18+
+- API rodando
+- Frontend rodando
+
+Instale as dependÃªncias:
+
+```bash
+npm install
+npx playwright install
+```
+
+Execute todos os testes:
+
+```bash
+npm test
+```
+
+Execute apenas os fluxos de interface:
+
+```bash
+npm run test:e2e
+```
+
+Execute apenas os testes de API:
+
+```bash
+npm run test:api
+```
+
+Modo UI:
+
+```bash
+npx playwright test --ui
+```
+
+Modo com navegador visÃ­vel:
+
+```bash
+npx playwright test --headed
+```
+
+## Estrutura
+
+```text
+e2e/
+â”œâ”€â”€ tests/api/
+â”œâ”€â”€ tests/e2e/
+â”œâ”€â”€ package.json
+â””â”€â”€ playwright.config.ts
+```
+
+## ReferÃªncia
+
+- [Playwright](https://playwright.dev/docs/intro)
